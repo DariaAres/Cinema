@@ -1,0 +1,3 @@
+class AuthentificationController < ApplicationController
+    
+  end
