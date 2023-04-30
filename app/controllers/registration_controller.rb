@@ -1,5 +1,4 @@
-class RegistrationController < ApplicationController
-    before_action :authorize_request, except: :sign_up
+class RegistrationController < ActionController::API
   
     # POST /users
     def sign_up 
