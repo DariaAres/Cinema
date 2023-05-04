@@ -56,5 +56,7 @@ group :development do
   gem 'annotate'
 end
 
+gem 'active_model_serializers', '~> 0.10.0'
 
 
+gem "pundit", "~> 2.3"
