@@ -2,6 +2,7 @@ class RegistrationController < ActionController::API
   
     # POST /users
     def sign_up 
+      binding.pry
       @user = User.new(user_params)
       if @user.save
         render json: @user, status: :created
@@ -12,8 +13,8 @@ class RegistrationController < ActionController::API
     end
   
     def user_params
-      params.permit(
-        :first_name, :last_name, :email, :password
+      params.require(:user).permit(
+        :first_name, :last_name, :email, :password, :password_confirmation, :country_id
       )
     end
 end
